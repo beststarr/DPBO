@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/gtk/ver1">
+    <file preprocess="xml-stripblanks">window.ui</file>
+    <file preprocess="xml-stripblanks">register.ui</file>
+    <file preprocess="xml-stripblanks">catatan.ui</file>
+    <file preprocess="xml-stripblanks">dashboard.ui</file>
+    <file preprocess="xml-stripblanks">menu.ui</file>
+    <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
+    <file>style.css</file>
+  </gresource>
+</gresources>

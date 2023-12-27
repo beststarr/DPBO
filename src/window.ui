@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="GtkAppWindow" parent="GtkApplicationWindow">
+    <property name="default-width">350</property>
+    <property name="default-height">700</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="header_bar">
+        <child type="end">
+          <object class="GtkMenuButton">
+            <property name="icon-name">open-menu-symbolic</property>
+            <property name="menu-model">primary_menu</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="main-box">
+      <property name="orientation">vertical</property>
+      <child>
+        <object class="GtkGrid">
+        <property name="column-homogeneous">True</property>
+        <property name="row-homogeneous">True</property>
+        <child>
+          <object class="GtkLabel" id="log">
+          <property name="label">Login</property>
+          <property name="name">login</property>
+          <layout>
+            <property name="column">2</property>
+            <property name="row">2</property>
+          </layout>
+          </object>
+      </child>
+      <child>
+          <object class="GtkLabel" id="msk">
+          <property name="label">Masuk ke Akun Anda</property>
+          <property name="name">msk</property>
+          <layout>
+            <property name="column">2</property>
+            <property name="row">3</property>
+          </layout>
+          </object>
+      </child>
+      <child>
+          <object class="GtkEntry" id="phone">
+          <property name="placeholder-text">No Telepon</property>
+          <property name="name">mail</property>
+          <layout>
+            <property name="column">2</property>
+            <property name="row">4</property>
+          </layout>
+          </object>
+      </child>
+      <child>
+          <object class="GtkEntry" id="pass">
+          <property name="placeholder-text">Password</property>
+          <property name="name">mail</property>
+          <layout>
+            <property name="column">2</property>
+            <property name="row">5</property>
+          </layout>
+          </object>
+      </child>
+      <child>
+          <object class="GtkButton" id="loginButton">
+          <property name="label">Login</property>
+          <property name="name">submit</property>
+          <layout>
+            <property name="column">2</property>
+            <property name="row">6</property>
+          </layout>
+          </object>
+      </child>
+      <child>
+          <object class="GtkButton" id="registerButton">
+          <property name="label">Tidak Memliki Akun? Sign Up</property>
+          <property name="name">tdk</property>
+          <layout>
+            <property name="column">2</property>
+            <property name="row">7</property>
+          </layout>
+          </object>
+      </child>
+      </object>
+      </child>
+      </object>
+    </child>
+  </template>
+
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About gtk_app</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+    <menu id="secondary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_File</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

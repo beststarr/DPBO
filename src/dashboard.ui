@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="GtkAppDashboardPage" parent="GtkApplicationWindow">
+    <property name="default-width">350</property>
+    <property name="default-height">700</property>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="header_bar">
+        <child type="end">
+          <object class="GtkMenuButton">
+            <property name="icon-name">open-menu-symbolic</property>
+            <property name="menu-model">primary_menu</property>
+          </object>
+        </child>
+        <!-- <child type="end">
+          <object class="GtkMenuButton">
+            <property name="icon-name">open-menu-symbolic</property>
+            <property name="menu-model">secondary_menu</property>
+          </object>
+        </child> -->
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="main-box">
+      <property name="orientation">vertical</property>
+      <child>
+        <object class="GtkGrid">
+        <property name="column-homogeneous">True</property>
+        <property name="row-homogeneous">True</property>
+        <child>
+          <object class="GtkLabel">
+          <layout>
+            <property name="column">0</property>
+            <property name="row">0</property>
+          </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+          <layout>
+            <property name="column">1</property>
+            <property name="row">0</property>
+          </layout>
+          </object>
+        </child>
+        <!-- <child>
+          <object class="GtkLabel">
+          <layout>
+            <property name="column">2</property>
+            <property name="row">0</property>
+          </layout>
+          </object>
+        </child> -->
+        <child>
+          <object class="GtkLabel">
+          <layout>
+            <property name="column">0</property>
+            <property name="row">1</property>
+          </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel">
+          <layout>
+            <property name="column">0</property>
+            <property name="row">3</property>
+          </layout>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="datang">
+          <property name="label">WELCOME</property>
+          <property name="name">login</property>
+          <layout>
+            <property name="column">1</property>
+            <property name="row">4</property>
+          </layout>
+          </object>
+      </child>
+            <child>
+          <object class="GtkButton" id="tambahButton">
+          <property name="label">Tambah Data</property>
+          <property name="name">submit</property>
+          <layout>
+            <property name="column">1</property>
+            <property name="row">5</property>
+          </layout>
+          </object>
+      </child>
+      <child>
+          <object class="GtkButton" id="keluarButton">
+          <property name="label">Logout</property>
+          <property name="name">tdk</property>
+          <layout>
+            <property name="column">1</property>
+            <property name="row">6</property>
+          </layout>
+          </object>
+      </child>
+
+        <!-- <child>
+        <object class="GtkLabel" id="blm">
+        <property name="label">Belum Memiliki Akun?</property>
+        <layout>
+            <property name="column">1</property>
+            <property name="row">8</property>
+          </layout>
+        </object>
+      </child> -->
+      <!-- <child>
+          <object class="GtkButton" id="SignUp">
+          <property name="label">Sign Up</property>
+          <property name="name">login</property>
+          <layout>
+            <property name="column">1</property>
+            <property name="row">9</property>
+          </layout>
+          </object>
+      </child> -->
+        <child>
+          <object class="GtkLabel">
+          <layout>
+            <property name="column">2</property>
+            <property name="row">0</property>
+          </layout>
+          </object>
+        </child>
+        </object>
+      </child>
+      
+      
+      <!-- <child>
+        <object class="GtkButton" id="signup">
+        <property name="label">Sign Up</property>
+        </object>
+      </child> -->
+      <!-- <child>
+          <object class="GtkEntry" id="entry_name"/>
+        </child> -->
+      </object>
+    </child>
+    <!-- <child>
+      <object class="GtkLabel" id="label">
+        <property name="label">Hello, Worlds!</property>
+        <attributes>
+          <attribute name="weight" value="bold"/>
+          <attribute name="scale" value="2"/>
+        </attributes>
+      </object>
+    </child> -->
+  </template>
+
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.show-help-overlay</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About gtk_app</attribute>
+        <attribute name="action">app.about</attribute>
+      </item>
+    </section>
+  </menu>
+    <menu id="secondary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_File</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>
